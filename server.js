@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // turn on routes
 app.use(routes);
-//if force was true it would srop and create tables
+//if force was true it would stop and create tables when there changes to anything
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
